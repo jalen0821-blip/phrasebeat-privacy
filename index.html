@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Phrasebeat Language Player 的隱私權政策：資料存在哪裡、哪些內容會送到 Google 或 DeepL、廣告與權限。">
+<title>Phrasebeat Language Player 隱私權政策</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F7F4EC;
+  --paper-raised:#FFFFFF;
+  --ink:#2B2A24;
+  --ink-dim:#6B6455;
+  --moss:#4A6741;
+  --moss-deep:#34492E;
+  --amber:#B96A2C;
+  --line:#E1DACB;
+  --tag-bg:#EDE6D3;
+  --good-bg:#E7F1DE;
+  --good-ink:#2E4326;
+  --leave-bg:#F3E4D3;
+  --leave-ink:#6B3A12;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1B1D17;
+    --paper-raised:#22251C;
+    --ink:#E9E4D6;
+    --ink-dim:#A79C88;
+    --moss:#8FB37A;
+    --moss-deep:#A9C99A;
+    --amber:#E0A15C;
+    --line:#33392A;
+    --tag-bg:#262A1F;
+    --good-bg:#2B3624;
+    --good-ink:#C7DDB9;
+    --leave-bg:#332419;
+    --leave-ink:#E3B98B;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1B1D17;
+  --paper-raised:#22251C;
+  --ink:#E9E4D6;
+  --ink-dim:#A79C88;
+  --moss:#8FB37A;
+  --moss-deep:#A9C99A;
+  --amber:#E0A15C;
+  --line:#33392A;
+  --tag-bg:#262A1F;
+  --good-bg:#2B3624;
+  --good-ink:#C7DDB9;
+  --leave-bg:#332419;
+  --leave-ink:#E3B98B;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans TC","Noto Sans",sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page{max-width:700px;margin:0 auto;padding:56px 24px 96px;}
+
+header.masthead{margin-bottom:44px;}
+.eyebrow{
+  font-size:12.5px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--amber);
+  margin:0 0 10px;
+}
+h1{
+  font-family:"Noto Serif TC",serif;
+  font-weight:900;
+  font-size:clamp(28px,4.5vw,38px);
+  line-height:1.3;
+  margin:0 0 14px;
+  text-wrap:balance;
+  color:var(--moss-deep);
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 18px;
+  font-size:13.5px;
+  color:var(--ink-dim);
+  font-variant-numeric:tabular-nums;
+}
+.meta b{color:var(--ink);font-weight:600;}
+
+.lede{
+  margin:22px 0 0;
+  font-size:16px;
+  color:var(--ink-dim);
+  max-width:62ch;
+}
+
+.summary{
+  margin:40px 0 48px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--paper-raised);
+  padding:22px 24px 6px;
+}
+.summary h2{
+  font-family:"Noto Serif TC",serif;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.04em;
+  margin:0 0 16px;
+  color:var(--moss-deep);
+}
+.row{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:14px 0;
+  border-top:1px solid var(--line);
+}
+.row:first-of-type{border-top:none;}
+.pill{
+  flex-shrink:0;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.03em;
+  padding:4px 10px;
+  border-radius:999px;
+  white-space:nowrap;
+  margin-top:2px;
+}
+.pill.good{background:var(--good-bg);color:var(--good-ink);}
+.pill.leave{background:var(--leave-bg);color:var(--leave-ink);}
+.row p{margin:0;font-size:14.5px;color:var(--ink);}
+.row .sub{display:block;margin-top:2px;font-size:13px;color:var(--ink-dim);}
+
+section{
+  margin:0 0 40px;
+  padding-left:20px;
+  border-left:2px solid var(--line);
+}
+section h2{
+  font-family:"Noto Serif TC",serif;
+  font-size:20px;
+  font-weight:700;
+  margin:0 0 4px;
+  color:var(--moss-deep);
+  text-wrap:balance;
+}
+section .num{
+  font-family:"Noto Sans TC",sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.08em;
+  color:var(--ink-dim);
+  display:block;
+  margin-bottom:6px;
+}
+section p{margin:12px 0;max-width:64ch;font-size:15px;}
+section ul{margin:12px 0;padding-left:1.3em;max-width:62ch;}
+section li{margin:6px 0;font-size:15px;}
+section a{color:var(--moss);text-decoration-color:var(--line);text-underline-offset:3px;}
+section a:hover{text-decoration-color:currentColor;}
+
+table.services{
+  width:100%;
+  border-collapse:collapse;
+  margin:16px 0;
+  font-size:13.5px;
+}
+table.services th,table.services td{
+  text-align:left;
+  padding:9px 10px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+table.services th{
+  font-weight:600;
+  color:var(--ink-dim);
+  font-size:12px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+table.services td.svc{font-weight:600;white-space:nowrap;}
+.wrap-table{overflow-x:auto;}
+
+.contact-card{
+  background:var(--tag-bg);
+  border-radius:12px;
+  padding:18px 20px;
+  margin-top:14px;
+  font-size:14.5px;
+}
+.contact-card a{color:var(--moss);font-weight:600;}
+
+footer{
+  margin-top:56px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:var(--ink-dim);
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Phrasebeat Language Player　隱私權政策</h1>
+    <div class="meta">
+      <span>生效日期：<b>2026 年 10 月 24 日</b></span>
+      <span>適用範圍：<b>Android 版 App「Phrasebeat Language Player」</b></span>
+    </div>
+    <p class="lede">
+      這是一個離線優先的個人影片語言學習工具：播放你自己裝置上的影片或 YouTube 影片、對照雙語字幕、
+      校正時間軸，也可以選用 AI 自動產生字幕。以下說明哪些資料會離開你的裝置、送到哪裡去，哪些完全不會。
+    </p>
+  </header>
+
+  <div class="summary">
+    <h2>資料速覽</h2>
+    <div class="row">
+      <span class="pill good">留在裝置上</span>
+      <p>你選的影片、字幕檔、播放紀錄、shift time 校正、白板收藏、App 設定、你自己填的 API Key
+        <span class="sub">全部存在裝置本機，開發者的伺服器完全看不到、也拿不到——因為根本沒有伺服器。</span>
+      </p>
+    </div>
+    <div class="row">
+      <span class="pill leave">你主動觸發才會送出</span>
+      <p>按「自動翻譯」「搜尋」「用 Gemini 自動產生字幕」時
+        <span class="sub">對應的文字、YouTube 連結或音訊片段會送到 Google 或 DeepL，詳見下方「第三方服務」與「Gemini 自動產生字幕」。</span>
+      </p>
+    </div>
+    <div class="row">
+      <span class="pill leave">播放 YouTube 影片時</span>
+      <p>由 YouTube 官方嵌入播放器處理
+        <span class="sub">套用 Google 自己的隱私權政策，這個 App 不會另外蒐集。</span>
+      </p>
+    </div>
+    <div class="row">
+      <span class="pill leave">廣告</span>
+      <p>App 內有 Google AdMob 廣告（橫幅與插頁）
+        <span class="sub">AdMob 可能蒐集廣告 ID 等裝置資訊，詳見下方「廣告」。</span>
+      </p>
+    </div>
+    <div class="row">
+      <span class="pill good">沒有帳號</span>
+      <p>不需要註冊登入，開發者沒有自己的分析或追蹤工具
+        <span class="sub">開發者不會知道你是誰、看了什麼影片、做了哪些字幕。</span>
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <span class="num">01</span>
+    <h2>我們如何存取你的影片與字幕</h2>
+    <p>
+      App 透過 Android 內建的「Storage Access Framework」讀取檔案：你自己挑一個資料夾授權
+      （例如相簿裡的 Movies 資料夾），之後 App 只能在那個資料夾底下瀏覽、播放、讀寫字幕檔，
+      拿不到裝置上其他地方的任何檔案。這個授權可以隨時在 Android 系統設定裡收回。
+    </p>
+    <p>
+      影片本身、字幕內容、你做的每一筆時間軸校正、跳過/合併/編輯紀錄、白板收藏，全部只存在你的裝置上
+      （用 App 自己的私有儲存空間，跟影片檔案分開放），不會上傳、不會備份到任何雲端、
+      開發者也沒有管道讀取這些內容。你選擇「儲存到資料夾」時，App 會在你指定的資料夾裡寫入
+      YouTube 連結檔（.path）與字幕檔（.srt），這些檔案由你自己保管。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">02</span>
+    <h2>Gemini 自動產生字幕（選用）</h2>
+    <p>
+      如果你想讓沒有字幕的影片自動產生逐字稿，可以使用這個功能。它完全是選用的，而且使用的是
+      <b>你自己</b>向 Google 申請的 Gemini API Key：
+    </p>
+    <ul>
+      <li><b>API Key</b>：只存在你裝置的 App 私有儲存空間，不會傳給開發者；只會在呼叫 Google 時當作憑證送給 Google。</li>
+      <li><b>YouTube 影片</b>：App 把該影片的連結送給 Gemini API，由 Google 自己讀取影片內容並回傳逐字稿；影片不會經過開發者。</li>
+      <li><b>你裝置上的影片或音檔</b>：App 先在裝置上只取出「聲音」（不含畫面），壓縮成約 5 分鐘一段的短音訊，
+        在你於畫面上按下確認之後才送給 Gemini API；暫存的音訊片段用完就刪除。</li>
+      <li><b>結果</b>：產生的字幕存在你的裝置上，也可能存成影片旁邊的 .srt 檔。</li>
+    </ul>
+    <p>
+      送給 Gemini API 的內容會依照 Google 對 Gemini API 的條款處理。使用免費額度時，Google 可能會把送出的內容
+      用來改進它的產品，所以<b>請不要對私人錄音、機密內容使用這個功能</b>；付費方案的處理方式不同，請以 Google 的條款為準。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">03</span>
+    <h2>第三方服務</h2>
+    <p>以下功能都是選用的，只有你主動操作才會把資料送出裝置：</p>
+    <div class="wrap-table">
+    <table class="services">
+      <thead>
+        <tr><th>功能</th><th>觸發時機</th><th>送出什麼</th><th>送到哪裡</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="svc">Gemini 自動產生字幕</td>
+          <td>在播放畫面設定裡選「用 Gemini 自動產生字幕」</td>
+          <td>YouTube 連結，或本機影片取出的音訊片段（見上方第 02 節）</td>
+          <td>Google（Gemini API）</td>
+        </tr>
+        <tr>
+          <td class="svc">自動翻譯字幕</td>
+          <td>設定頁選了翻譯服務、在播放畫面按下「自動翻譯」</td>
+          <td>還沒有母語翻譯的字幕文字</td>
+          <td>Google 翻譯，或你自己填 API Key 的 DeepL</td>
+        </tr>
+        <tr>
+          <td class="svc">查字典</td>
+          <td>反白選字後按「搜尋」</td>
+          <td>你選取的文字</td>
+          <td>Google 搜尋（App 內建瀏覽器開啟）</td>
+        </tr>
+        <tr>
+          <td class="svc">YouTube 影片播放與資訊</td>
+          <td>貼上或分享 YouTube 連結、開啟 YouTube 影片</td>
+          <td>影片編號（用來取得標題與縮圖）；播放本身由 YouTube 官方嵌入播放器自行處理</td>
+          <td>YouTube／Google</td>
+        </tr>
+        <tr>
+          <td class="svc">字體下載</td>
+          <td>App 啟動、套用主題時</td>
+          <td>不含個人資料，僅下載字型檔本身</td>
+          <td>Google Fonts</td>
+        </tr>
+        <tr>
+          <td class="svc">廣告</td>
+          <td>使用 App 時顯示廣告</td>
+          <td>見下方第 04 節</td>
+          <td>Google AdMob</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      這些服務各自的資料處理方式，請參考它們自己公開的政策：
+    </p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>（涵蓋 Google 翻譯、Google 搜尋、YouTube、Google Fonts）</li>
+      <li><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 附加服務條款</a>（Gemini 自動產生字幕）</li>
+      <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用使用其服務的網站或應用程式中的資訊</a>（AdMob 廣告）</li>
+      <li><a href="https://www.deepl.com/privacy" target="_blank" rel="noopener">DeepL 隱私權政策</a>（只有你自己設定 DeepL API Key 才會用到）</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="num">04</span>
+    <h2>廣告</h2>
+    <p>
+      這個 App 內有 Google AdMob 提供的廣告：在畫面下方有橫幅廣告；累計使用滿 60 分鐘後，
+      你按下播放相關的控制項時，會出現一次插頁廣告，看完之後重新計時。
+    </p>
+    <ul>
+      <li><b>AdMob 可能蒐集的資料</b>：廣告 ID、IP 位址、裝置與系統資訊、廣告互動與 App 使用相關資料，用來顯示廣告、衡量成效與防止濫用。這些資料由 Google 依其政策處理，開發者不會直接收到你的個人資料。</li>
+      <li><b>個人化廣告與同意</b>：在需要徵求同意的地區（例如歐洲經濟區、英國），會先顯示 Google 的同意表單，你可以選擇是否同意個人化廣告。你也可以隨時到 Android「設定 → Google → 廣告」重設廣告 ID 或停用個人化廣告。</li>
+      <li><b>使用時間計時</b>：為了決定何時顯示插頁廣告，App 會在裝置本機累計「App 在前景的使用時間」，只存在裝置上，不會上傳；待機或切到其他 App 的時間不計入。</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="num">05</span>
+    <h2>藍牙遙控與媒體按鍵</h2>
+    <p>
+      App 可以接收藍牙耳機、遙控器的播放、停止、重播、音量等按鍵來控制播放。這只是接收「按了哪一顆鍵」，
+      不會讀取或記錄藍牙裝置的名稱、位址或其他資訊；你自己指定的按鍵對應只存在裝置本機。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">06</span>
+    <h2>分享功能</h2>
+    <p>
+      播放畫面的「分享」按鈕，是叫出 Android 系統原生的分享選單，把一段文字（跟本機影片會
+      額外剪出的一小段 mp3）交給你自己選的其他 App（例如 Anki、訊息、雲端硬碟）。
+      這個過程完全由你決定要分享給誰，App 本身不會把這些內容送到任何地方。
+      同樣地，你從 YouTube 等 App「分享」連結給這個 App，只是讓 App 讀到那個連結，不會另外保存或回傳。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">07</span>
+    <h2>權限說明</h2>
+    <p>App 本身只會要求「網路連線」這一個權限：</p>
+    <ul>
+      <li><b>網路連線</b>：翻譯、查字典、YouTube 播放、Gemini 自動字幕、下載字型、顯示廣告都需要連上網路才能運作。</li>
+    </ul>
+    <p>
+      另外，App 內建的元件會帶入下列權限，用途如下：
+    </p>
+    <ul>
+      <li><b>網路狀態</b>、<b>廣告 ID</b>、<b>Android 廣告服務</b>（廣告 ID、成效歸因、興趣主題）：Google AdMob 廣告元件用來顯示與衡量廣告，詳見第 04 節。</li>
+      <li><b>保持喚醒</b>：影片播放元件用來避免播放中途被系統休眠打斷。</li>
+    </ul>
+    <p>
+      App 不會要求裝置的完整檔案存取權限，也不會要求相機、麥克風、聯絡人、定位、藍牙連線等權限。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">08</span>
+    <h2>兒童隱私</h2>
+    <p>
+      這個 App 不是針對 13 歲以下兒童設計，也不會刻意蒐集兒童的個人資料；顯示的廣告也是一般受眾的廣告。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">09</span>
+    <h2>刪除你的資料</h2>
+    <p>
+      因為所有資料都只存在你的裝置上，解除安裝這個 App，或是在 Android 系統設定裡清除
+      App 資料，就會把所有播放紀錄、字幕校正、白板收藏、設定（包含你填的 API Key）完全刪除，
+      不需要另外聯絡開發者。你自己存到資料夾裡的 .path、.srt 檔案，請自行刪除。
+      已經送到 Google、DeepL 的內容，請依各服務自己的方式處理。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">10</span>
+    <h2>政策異動</h2>
+    <p>
+      如果日後功能異動、影響到資料處理方式，這份政策會更新，並且更新這頁最上面的生效日期。
+    </p>
+  </section>
+
+  <section>
+    <span class="num">11</span>
+    <h2>聯絡我們</h2>
+    <p>對這份政策或 App 的資料處理方式有任何問題，歡迎來信：</p>
+    <div class="contact-card">
+      <a href="mailto:watermiin14@gmail.com">watermiin14@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>Phrasebeat Language Player · 隱私權政策 · 最後更新於 2026 年 10 月 24 日</footer>
+</div>
+</body>
+</html>
